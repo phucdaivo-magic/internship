@@ -1,0 +1,27 @@
+const areaOne = [
+  { id: 1, name: "Bàn 1" },
+  { id: 2, name: "Bàn 2" },
+  { id: 3, name: "Bàn 3" },
+  { id: 4, name: "Bàn 4" },
+  { id: 5, name: "Bàn 5" },
+  { id: 6, name: "Bàn 6" },
+  { id: 7, name: "Bàn 7" },
+  { id: 8, name: "Bàn 8" },
+  { id: 9, name: "Bàn 9" },
+  { id: 10, name: "Bàn 10" },
+  { id: 11, name: "Bàn 11" },
+  { id: 12, name: "Bàn 12" },
+  { id: 13, name: "Bàn 13" },
+  { id: 14, name: "Bàn 14" },
+  { id: 15, name: "Bàn 15" },
+  { id: 16, name: "Bàn 16" },
+  { id: 17, name: "Bàn 17" },
+  { id: 18, name: "Bàn 18" },
+  { id: 19, name: "Bàn 19" },
+  { id: 20, name: "Bàn 20" },
+  { id: 21, name: "Bàn 21" },
+  { id: 22, name: "Bàn 22" },
+  { id: 23, name: "Bàn 23" },
+];
+
+export default areaOne;

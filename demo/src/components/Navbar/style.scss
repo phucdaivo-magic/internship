@@ -1,0 +1,30 @@
+.myNavbar {
+  .nav {
+    justify-content: center;
+    li {
+      flex: initial;
+      margin: 0 2px;
+      width: 100px;
+      height: 50px;
+      a {
+        color: #ffffff;
+        font-size: 10px;
+        text-transform: uppercase;
+        border-radius: 40%;
+        background-color: #f16421;
+        &.active {
+          background-color: #f2a122;
+        }
+      }
+    }
+  }
+}
+
+.icon-Furniture {
+  background-color: #cbcbce;
+  border-radius: 10px;
+}
+
+.drag {
+  cursor: move;
+}

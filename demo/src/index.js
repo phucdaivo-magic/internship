@@ -1,14 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+//Import bootstrap, jquery, popper.js
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "popper.js/dist/umd/popper.min.js";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
+//Import scss
+import "./scss/index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
