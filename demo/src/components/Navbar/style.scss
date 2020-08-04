@@ -72,8 +72,11 @@
     .area {
       background-color: #cfac75;
       .area-table {
+        position: relative;
         .area-left {
           padding: 0 10px;
+          float: left;
+          width: 1000px;
           .area-content {
             background-color: #798394;
             height: 100%;
@@ -125,6 +128,9 @@
         }
         .area-right {
           padding: 0;
+          float: left;
+          width: 349px;
+          height: 574px;
           .searchbox {
             background-color: #202831;
             height: 100%;
@@ -136,12 +142,14 @@
             }
           }
           .furniture {
-            padding: 0 28px;
+            width: 100%;
+            position: absolute;
+            left: 0;
           }
           .infor {
             float: left;
             width: 100%;
-            margin: 25px 0 0;
+            margin-top: 136%;
             button {
               text-transform: uppercase;
               border-color: transparent;
@@ -167,4 +175,8 @@
 
 button:focus {
   outline: none !important;
+}
+.box {
+  width: 200px;
+  height: 200px;
 }

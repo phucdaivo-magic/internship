@@ -14,6 +14,7 @@ export default class Dragable extends Component {
       x: -400,
       y: 200,
     },
+    target: [],
   };
 
   handleDrag = (e, ui) => {
@@ -26,22 +27,36 @@ export default class Dragable extends Component {
     });
   };
 
-  onStart = () => {
+  onStart = (e, data) => {
     this.setState({ activeDrags: ++this.state.activeDrags });
   };
 
-  onStop = () => {
-    this.setState({ activeDrags: --this.state.activeDrags });
+  onStop = (e, data) => {
+    let [...target] = this.state.target;
+    target = target.filter(
+      (item) => item.node.innerHTML !== data.node.innerHTML
+    );
+    target.push(data);
+    this.setState({
+      activeDrags: --this.state.activeDrags,
+      target,
+    });
+
+    this.props.getData(this.state.target);
   };
 
   render() {
-    const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
-    return dataArea.map((item, index) => (
-      <DraggableCore {...dragHandlers} key={index}>
-        <div>
-          <div className="handle icon-Furniture drag">{item.name}</div>
-        </div>
-      </DraggableCore>
-    ));
+    const dragHandlers = {
+      onStart: this.onStart,
+      onDrag: this.handleDrag,
+      onStop: this.onStop,
+    };
+    return dataArea.map((item, index) => {
+      return (
+        <DraggableCore {...dragHandlers} key={index} bounds="body">
+          <div className="icon-Furniture drag">{item.name}</div>
+        </DraggableCore>
+      );
+    });
   }
 }
