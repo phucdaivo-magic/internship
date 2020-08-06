@@ -72,7 +72,6 @@
     .area {
       background-color: #cfac75;
       .area-table {
-        position: relative;
         .area-left {
           padding: 0 10px;
           float: left;
@@ -106,6 +105,7 @@
               bottom: 0;
               transform: translateX(-50%);
               left: 50%;
+              z-index: 1000;
               button {
                 text-transform: uppercase;
                 width: 130px;
