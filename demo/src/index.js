@@ -8,8 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "popper.js/dist/umd/popper.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
-import "react-grid-layout/css/styles.css";
-import "react-resizable/css/styles.css";
+
 //Import scss
 import "./scss/index.scss";
 
