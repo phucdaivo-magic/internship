@@ -58,27 +58,30 @@ class Main extends Component {
     });
   };
 
- handleStop = (e,data,dragItem) => {
-    const [...listItemSelect] = this.state.listItemSelect;
-      let {x,y} = data;
-      let position= {x ,y};
-      listItemSelect.map((item,index)=>{
-       if(dragItem.id === item.id ){
-         item.defaultPosition = position;
-       }
-     })
-     console.log(this.state);
-  };
-  // handleSave = ()=>{
-  //   let list = [...this.state.listItemSelect];
-  //   list.map((item,index)=>{
-  //     if()
-  //      item.defaultPosition = position;
-  //  })
-  //  console.log(this.state.Items[0].ListItems); 
-  //  console.log(list)
+//  handleStop = (e,data,dragItem) => {
+//     const [...listItemSelect] = this.state.listItemSelect;
+//       let {x,y} = data;
+//       let position= {x ,y};
+//       listItemSelect.map((item,index)=>{
+//        if(dragItem.id === item.id ){
+//          item.defaultPosition = position;
+//        }
+//      })
+//      console.log(this.state);
+//   };
 
-  // }
+
+// phần này nhờ anh Phúc xem giúp em. em chỉ đổi thông tin trên mảng tạm là list, chưa setstate mà các phần Items.defaultPosition đều bị đổi theo. :((
+  handleSave = ()=>{
+    let list = [...this.state.listItemSelect];
+    list.map((item,index)=>{
+      let position= {x : -500,y:50};
+       item.defaultPosition = position;
+   })
+   console.log(this.state.Items[0].ListItems); 
+   console.log(list)
+
+  }
   render() {
     return (
       <div className="Main">
